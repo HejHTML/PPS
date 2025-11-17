@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Månadslön per sekund</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Din månadslön per sekund</h1>
+      <p>Motivationshöjaren när jobbet känns trist!</p>
+    </header>
+
+    <section class="controls">
+      <label for="salary">Månadslön (kr)</label>
+      <input id="salary" type="number" inputmode="decimal" min="0" step="1" placeholder="Ex: 35000" value="35000" />
+
+      <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" class="ghost">Stopp</button>
+        <button id="resetBtn" class="ghost">Nollställ</button>
+      </div>
+    </section>
+
+    <section class="display">
+      <div id="displayValue">0.00 kr</div>
+      <div id="ppsInfo"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
