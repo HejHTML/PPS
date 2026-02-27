@@ -1,19 +1,25 @@
 :root {
-  --bg: #608cd3;
+  --bg: #6f85a7;
   --card: #0b1220;
-  --accent: #06b6d4;
+  --accent: #6698a1;
   --muted: #9aa4b2;
-  --glass: rgba(255,255,255,0.03);
+  --glass: rgba(255, 255, 255, 0.03);
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
 
 body {
   margin: 0;
   padding: 20px;
-  background: linear-gradient(180deg, #5177bd 0%, #071b2a 100%);
+  background: rgb(221, 221, 111);
   color: #e6eef6;
   display: flex;
   align-items: center;
@@ -27,13 +33,21 @@ body {
   background: var(--card);
   border-radius: 18px;
   padding: 20px;
-  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  box-shadow: 5px 5px rgba(186, 186, 74, 0.695);
   display: grid;
   gap: 18px;
 }
 
-header h1 { margin: 0; font-size: 20px; }
-header p { margin: 0; color: var(--muted); font-size: 10px; }
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+}
 
 .controls {
   display: grid;
@@ -42,12 +56,21 @@ header p { margin: 0; color: var(--muted); font-size: 10px; }
   align-items: end;
 }
 
-.controls .col { display: flex; flex-direction: column; gap: 8px; }
-label { font-size: 13px; color: var(--muted); }
+.controls .col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
-input[type=number], select {
+label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+input[type=number],
+select {
   appearance: none;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   background: var(--glass);
   padding: 12px;
   border-radius: 10px;
@@ -64,7 +87,10 @@ input[type=number], select {
   gap: 6px;
 }
 
-.buttons { display: flex; gap: 8px; }
+.buttons {
+  display: flex;
+  gap: 8px;
+}
 
 button {
   background: linear-gradient(90deg, var(--accent), #0ea5a8);
@@ -78,12 +104,12 @@ button {
 
 button.ghost {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--muted);
 }
 
 .display {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
   padding: 18px;
   border-radius: 12px;
   display: flex;
@@ -112,7 +138,7 @@ button.ghost {
   display: flex;
   flex-direction: column;
   transform: translateY(0);
-  transition: transform 300ms cubic-bezier(.2,.8,.2,1);
+  transition: transform 300ms cubic-bezier(.2, .8, .2, 1);
 }
 
 .wheel span {
@@ -132,13 +158,30 @@ button.ghost {
   margin-left: 6px;
 }
 
-.muted-small { font-size: 13px; color: var(--muted); }
+.muted-small {
+  font-size: 13px;
+  color: var(--muted);
+}
 
 @media (max-width:520px) {
-  .controls { grid-template-columns: 1fr; }
-  .digitSlot { width: 28px; height: 46px; }
-  .wheel span { font-size: 32px; height: 46px; line-height: 46px; }
-  .decimalSlot { font-size: 22px; }
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .digitSlot {
+    width: 28px;
+    height: 46px;
+  }
+
+  .wheel span {
+    font-size: 32px;
+    height: 46px;
+    line-height: 46px;
+  }
+
+  .decimalSlot {
+    font-size: 22px;
+  }
 }
 
 footer {
